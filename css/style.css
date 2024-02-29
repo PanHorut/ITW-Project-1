@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Textile"; 
+    src: url('../fonts/textile.ttf') format('truetype'); 
+}
+
+#heyoooo{
+    display: none;
+}
+
+/* BARVY
+#333333     SEDA
+green       ZELENA
+lightgreen  Svetle zelena
+*/
+
+/* GENERAL SETTINGS OF STYLE */
+
+body{
+    background-image: url("../img/bg/bg-body.svg");
+    margin: 0 auto;
+    padding: 0;
+}
+
+main{
+    margin: 0 auto;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    letter-spacing: 0.2rem;
+    font-family: "Calistoga";
+    text-transform: uppercase;
+    font-size: 16px;
+    color: green;
+}
+
+h3{
+    font-family: "Calistoga";
+    color: #333;
+}
+
+p{
+    font-family: "Spectral";
+    color:#333;
+    font-size: 16px;
+}
+
+.name{
+    font-family: "Spectral";
+    color:#333;
+    font-size: 20px;
+}
+
+
+.heading span{
+    font-size: 24px;
+    font-family: "Textile";
+    color: #333;
+}
+
+#about, #events, #services, footer,
+#team .section-content,
+#menu .section-content, 
+#contact .section-content{
+    min-width: 768px;
+    max-width: 1200px;
+}
+
+section, #team .section-content,
+#menu .section-content, #contact .section-content{
+    display: block;
+    margin: 0 auto;
+}
+
+#about, #events, #services, footer{
+    background-color: white;
+    border-left: 1px dashed green;
+    border-right: 1px dashed green;
+}
+
+#about, #team, #events, #menu, #services, #contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0px 160px 0px;
+}
+
+.heading{
+    text-align: center;
+}
+
+#team h2, #menu h2, #contact h2{
+    color: lightgreen;
+}
+
+.references ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.references li{
+    width: 20px;
+    height: 20px;
+    margin: 0px 6px;
+   
+}
+
+.references a{
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: transparent;
+    visibility: hidden;
+}
+
+.references a::before{
+    visibility: visible;
+    color: green;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f005";
+}
+
+img{
+    opacity: 0.9;
+}
+
+/* END OF GENERAL SETTINGS */
+
+/* ABOUT SECTION STYLE */
+#about .heading{
+    text-align: center;
+}
+
+#about .references{
+    margin-left: 20%;
+}
+
+#about .name{
+    margin-left: 29%;
+}
+/* END OF ABOUT SECTION */
+
+/* TEAM SECTION STYLE */
+
+#team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* END OF TEAM SECTION */
