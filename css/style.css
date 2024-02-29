@@ -549,6 +549,67 @@ nav ul li:nth-child(3)::before{
 
 /* SERVICES SECTION STYLE */
 
+#services .section-content{
+    display: flex;
+   
+    justify-content: start;
+    width: 95%;
+    height: 400px;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+    opacity: 0.7;
+
+}
+
+table{
+    position: relative;
+    width: 50%;
+
+}
+
+table::after{
+    position: absolute;
+    content: url("../img/gang/heisenberg.jpg");
+    transform: scale(30%) translateX(-15%) translateY(-220%);
+   
+}
+
+th{
+    display: none;
+}
+
+td:nth-child(1) a{
+    color:white;
+    font-family: "Calistoga";
+    border-bottom: 2px solid black;
+    padding: 0;
+}
+
+td:nth-child(1) a::after{
+    display: flex;
+    content: "";
+    border-bottom: 2px dotted white;
+}
+
+td:nth-child(2){
+    color:white;
+    font-family: "Spectral";
+}
+
+td:nth-child(2)::before{
+    content: '$';
+}
+
+tr:last-child td:nth-child(2)::before{
+    content: '';
+}
+
+tr:last-child a{
+    color: white;
+}
+
 /* END OF SERVICES STYLE */
 
 /* CONTACT SECTION STYLE */
