@@ -33,6 +33,7 @@ main{
 ul{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 a{
@@ -65,12 +66,6 @@ p{
 }
 
 
-.heading span{
-    font-size: 24px;
-    font-family: "Textile";
-    color: #333;
-}
-
 #about, #events, #services, footer,
 #team .section-content,
 #menu .section-content, 
@@ -101,6 +96,13 @@ section, #team .section-content,
 
 .heading{
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading span{
+    font-size: 24px;
+    font-family: "Textile";
+    color: #333;
 }
 
 #team h2, #menu h2, #contact h2{
@@ -110,6 +112,8 @@ section, #team .section-content,
 #team span, #menu span, #contact span{
     color: white;
 }
+
+
 
 .references ul{
     display: flex;
@@ -206,5 +210,66 @@ img{
 /* END OF TEAM STYLE */
 
 /* EVENTS SECTION STYLE */
+
+#events .section-item{
+    display: inline-block;
+    padding: 20px 0px;
+    margin: 0px 10px
+}
+
+#events h3{
+    margin: 0;
+   
+}
+
+#events .section-item:nth-child(2) h3{
+    text-align: end;
+}
+
+#events .section-item:nth-child(2) .events-props{
+    justify-content: end;   
+}
+
+#events .section-item:nth-child(2){
+    border-top: 1px dotted #333;
+    border-bottom: 1px dotted #333;
+}
+
+#events p{
+    margin: 0;
+}
+
+.events-props{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.events-props span{
+    margin-top: 4px;
+    color:#333;
+}
+
+#events .section-item img{
+    width: 40%;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+
+#events .section-item:nth-child(2) img{
+    width: 40%;
+    float: right;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+#events .references ul{
+    height: 32px;
+    align-items: center;
+
+}
 
 /* END OF EVENTS STYLE */
