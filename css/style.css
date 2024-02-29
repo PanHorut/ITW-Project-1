@@ -95,7 +95,8 @@ section, #team .section-content,
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px auto 160px auto;
+    padding-top: 100px;
+    padding-bottom: 160px;
 }
 
 .heading{
@@ -104,6 +105,10 @@ section, #team .section-content,
 
 #team h2, #menu h2, #contact h2{
     color: lightgreen;
+}
+
+#team span, #menu span, #contact span{
+    color: white;
 }
 
 .references ul{
@@ -138,7 +143,7 @@ img{
     opacity: 0.9;
 }
 
-/* END OF GENERAL SETTINGS */
+/* END OF GENERAL STYLE */
 
 /* ABOUT SECTION STYLE */
 #about .heading{
@@ -152,7 +157,7 @@ img{
 #about .name{
     margin-left: 29%;
 }
-/* END OF ABOUT SECTION */
+/* END OF ABOUT STYLE */
 
 /* TEAM SECTION STYLE */
 
@@ -161,15 +166,19 @@ img{
 }
 
 #team .section-content{
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
 }
 
 #team .section-item{
+    background-color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
+    
     
 }
 
@@ -187,14 +196,15 @@ img{
 
 #team .references{
     order: 3;
-}
-
-#team ul{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-
 #team p{
     order: 4;
 }
-/* END OF TEAM SECTION */
+/* END OF TEAM STYLE */
+
+/* EVENTS SECTION STYLE */
+
+/* END OF EVENTS STYLE */
