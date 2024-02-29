@@ -150,6 +150,121 @@ img{
 
 /* END OF GENERAL STYLE */
 
+/* HEADER STYLE */
+
+header{
+    background-image: url("../img/bg/bg-header.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* NAVBAR STYLE */
+nav ul{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    background-color: white;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0px;
+    border-top: 1px dashed green;
+    border-bottom: 1px dashed green;
+}
+
+nav a{
+    color: #333;
+    font-family: "Calistoga";
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+nav ul li:nth-child(3) a{
+    margin-right: 20px;
+}
+
+nav ul li:nth-child(4) a{
+    margin-left: 20px;
+}
+
+nav ul::before{
+    position: absolute;
+    content: url("../img/custom/leaf.svg");
+    transform: scale(40%) translate(-50%, -50%) scaleX(-1) rotate(-90deg);
+    top: -10%;
+}
+
+/* LOGO */
+#header-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20%;
+}
+
+#header-title span{
+    font-family: "Calistoga";
+    text-transform: uppercase;
+    color: white;
+    line-height: 1.1;
+    font-weight: 800;
+    text-shadow: 0 0 10px #004d00, 0 0 20px #004d00, 0 0 30px #004d00;
+}
+
+#header-title span:nth-child(1){
+    font-size: 120px;
+}
+
+#header-title span:nth-child(2){
+    font-size: 70px;
+    position: relative;
+}
+
+#header-title span:nth-child(2)::before{
+    position: absolute;
+    content: url("../img/custom/flag.svg");
+    transform: scale(30%) translate(-230%, -110%);
+}
+
+#header-title span:nth-child(2)::after{
+    position: absolute;
+    content: url("../img/custom/flag.svg");
+    transform: scale(30%) scaleX(-1) translate(100%, -110%);
+
+}
+
+#header-title span:nth-child(3){
+    font-size: 22px;
+}
+
+#header-title span:nth-child(4){
+    font-family: "Textile";
+    font-size: 36px;
+    text-transform: none;
+    line-height: 5rem;
+}
+
+#header-title span:nth-child(4)::before{
+    content: '“';
+    padding-right: 5px;
+}
+
+#header-title span:nth-child(4)::after{
+    content: '”';
+    padding-left: 5px;
+}
+
+/* END OF HEADER STYLE */
+
 /* ABOUT SECTION STYLE */
 #about .heading{
     text-align: center;
