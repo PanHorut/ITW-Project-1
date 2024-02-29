@@ -164,21 +164,34 @@ header{
     justify-content: center;
 }
 
+header::after{
+    position: absolute;
+    content: "";
+    background-image: url("../img/custom/beers.png");
+    bottom: -10%;
+    width: 100%; /* Set width to 100% */
+    height: 300px;
+    z-index: 2;
+    
+}
+
 /* NAVBAR STYLE */
 nav ul{
     position:absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    width: auto;
+    grid-column-gap: 15%;
     background-color: white;
-    bottom: -10%;
+    bottom: -20%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 20px 0px;
+    padding: 20px 200px;
     border-top: 1px dashed green;
     border-bottom: 1px dashed green;
 }
+
 
 nav a{
     color: #333;
@@ -188,6 +201,7 @@ nav a{
 }
 
 nav ul li:nth-child(3) a{
+    position: relative;
     margin-right: 20px;
 }
 
@@ -195,10 +209,10 @@ nav ul li:nth-child(4) a{
     margin-left: 20px;
 }
 
-nav ul::before{
+nav ul li:nth-child(3)::before{
     position: absolute;
     content: url("../img/custom/leaf.svg");
-    transform: scale(40%) translate(-50%, -50%) scaleX(-1) rotate(-90deg);
+    transform: scale(40%) translate(275%, -50%) scaleX(-1) rotate(-90deg);
     top: -10%;
 }
 
@@ -266,6 +280,10 @@ nav ul::before{
 /* END OF HEADER STYLE */
 
 /* ABOUT SECTION STYLE */
+#about{
+    padding-top: 250px;
+}
+
 #about .heading{
     text-align: center;
 }
@@ -641,3 +659,30 @@ footer span:last-child{
 }
 
 /* END OF FOOTER STYLE */
+
+/* HORIZONTAL IMAGES */
+
+#team, #menu, #contact{
+    position: relative;
+}
+
+#team::before, #team::after,
+#menu::before, #menu::after,
+#contact::before, #contact::after{
+    position: absolute;
+    content: "";
+    background-image: url("../img/custom/hr.svg");
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+}
+
+#team::before, #menu::before, #contact::before{
+    top: -4%;
+}
+
+#team::after, #menu::after, #contact::after{
+    bottom: -4%;
+}
+
+/* END OF HORIZONTAL IMAGES */
