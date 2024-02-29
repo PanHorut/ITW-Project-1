@@ -66,7 +66,7 @@ p{
 }
 
 
-#about, #events, #services, footer,
+#about, #events, #services, footer .section-content,
 #team .section-content,
 #menu .section-content, 
 #contact .section-content{
@@ -75,12 +75,13 @@ p{
 }
 
 section, #team .section-content,
-#menu .section-content, #contact .section-content{
+#menu .section-content, #contact .section-content,
+footer .section-content{
     display: block;
     margin: 0 auto;
 }
 
-#about, #events, #services, footer{
+#about, #events, #services, footer .section-content{
     background-color: white;
     border-left: 1px dashed green;
     border-right: 1px dashed green;
@@ -486,3 +487,42 @@ input[type="submit"]{
 }
 
 /* END OF CONTACT STYLE */
+
+/* FOOTER STYLE */
+
+footer .section-content{
+    height: 150px;
+    width: 100%;
+    position: relative;
+}
+
+footer .section-content::after{
+    height: 150px;
+    content: "";
+    display: block;
+    background-image: url("../img/custom/gang.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+}
+
+footer a, footer span{
+    position: absolute;
+    top: 50%;
+    font-family: "Calistoga";
+    color:#333;
+    transform: translateY(-50%);
+}
+
+footer a{
+    left: 0;  
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+footer span:last-child{
+    right: 0;
+    margin-right: 20px;
+}
+
+/* END OF FOOTER STYLE */
