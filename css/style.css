@@ -413,3 +413,76 @@ img{
 
 /* END OF MENU STYLE */
 
+/* SERVICES SECTION STYLE */
+
+/* END OF SERVICES STYLE */
+
+/* CONTACT SECTION STYLE */
+#contact{
+    background-image: url("../img/bg/bg-contact.jpg");
+}
+
+#contact .section-content{
+    display: grid;
+    grid-template-areas: "image quote"
+                         "image form";
+
+}
+
+#contact blockquote{
+    grid-area: quote;
+    background-color: white;
+    margin: 0;
+    padding: 15px;
+    opacity: 0.9;
+}
+
+#contact .name, #contact p{
+    color:black;
+    font-style: italic;
+}
+
+#contact p{
+    font-size: 20px;
+}
+
+#contact img{
+    background-color: white;
+    grid-area: image;
+    height: 400px;
+    padding: 5px;
+}
+
+#contact .contact-form{
+    grid-area: form;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 40px 0px 40px;
+}
+
+input, select, textarea{
+    background-color: #f7ced3;
+    border: 5px solid white;
+    margin-bottom: 20px;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+input:valid, select:valid, textarea:valid{
+    background-color: #cce6c2;
+}
+
+input:focus, select:focus, textarea:focus{
+    opacity: 1;
+}
+
+input[type="submit"]{
+    margin-bottom: 0px;
+    align-self: center;
+    padding: 10px 50px;
+}
+
+/* END OF CONTACT STYLE */
