@@ -232,15 +232,26 @@ nav ul li:nth-child(3)::before{
     line-height: 1.1;
     font-weight: 800;
     text-shadow: 0 0 10px #004d00, 0 0 20px #004d00, 0 0 30px #004d00;
+    animation: slideUp;
+    animation-duration: 4s;
+    position: relative;
 }
 
+@keyframes slideUp{
+    from {top: 10%}
+    to {top: 0%}
+}
+
+
+
 #header-title span:nth-child(1){
+    
     font-size: 120px;
 }
 
 #header-title span:nth-child(2){
     font-size: 70px;
-    position: relative;
+    
 }
 
 #header-title span:nth-child(2)::before{
@@ -282,6 +293,28 @@ nav ul li:nth-child(3)::before{
 /* ABOUT SECTION STYLE */
 #about{
     padding-top: 250px;
+    z-index: 1;
+    
+}
+
+#about::before{
+    content: "";
+    background: url(../img/custom/sprites.svg) 0 0;
+    position: absolute;
+    width: 150px;
+    height: 310px; 
+    z-index: 0;
+    transform: translateX(275%) translateY(-30%) rotate(-45deg);
+}
+
+#about::after{
+    content: "";
+    background: url(../img/custom/sprites.svg) 160px 0;
+    position: absolute;
+    width: 170px;
+    height: 310px; 
+    z-index: 0;
+    transform: translateX(-275%) translateY(120%) rotate(-45deg);
 }
 
 #about .heading{
@@ -345,10 +378,36 @@ nav ul li:nth-child(3)::before{
 
 /* EVENTS SECTION STYLE */
 
+#events{
+    position: relative;
+    z-index: -1;
+    
+}
+
 #events .section-item{
     display: inline-block;
     padding: 20px 0px;
-    margin: 0px 10px
+    margin: 0px 10px;
+}
+
+#events::before{
+    content: "";
+    background: url(../img/custom/sprites.svg) 300px 0;
+    position: absolute;
+    width: 150px;
+    height: 310px; 
+    z-index: -1;
+    transform: translateX(295%) translateY(-25%) rotate(-45deg);
+}
+
+#events::after{
+    content: "";
+    background: url(../img/custom/sprites.svg) 450px 0;
+    position: absolute;
+    width: 150px;
+    height: 310px; 
+    z-index: -1;
+    transform: translateX(295%) translateY(315%) rotate(45deg);
 }
 
 #events h3{
@@ -371,6 +430,7 @@ nav ul li:nth-child(3)::before{
 
 #events p{
     margin: 0;
+    
 }
 
 .events-props{
@@ -384,6 +444,7 @@ nav ul li:nth-child(3)::before{
     margin-top: 4px;
     color:#333;
 }
+
 
 #events .section-item img{
     width: 40%;
@@ -439,6 +500,8 @@ nav ul li:nth-child(3)::before{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    opacity: 0.9;
 }
 
 .description a{
@@ -454,11 +517,80 @@ nav ul li:nth-child(3)::before{
     content: "$";
 }
 
+#menu .description::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    border-color: transparent transparent red transparent;
+}
+
+#menu .section-item:nth-child(1) .description::before{
+    border-color: transparent transparent #cce6c2 transparent;
+    transform: rotate(-90deg);
+    left: -22px;
+}
+
+#menu .section-item:nth-child(2) .description::before{
+    border-color: transparent transparent white transparent;
+    transform: rotate(180deg);
+    bottom: -15px;
+    
+}
+
+#menu .section-item:nth-child(3) .description::before{
+    border-color: transparent transparent #cce6c2 transparent;
+    transform: rotate(-90deg);
+    left: -22px;
+}
+
+#menu .section-item:nth-child(4) .description::before{
+    border-color: transparent transparent #f7ced3 transparent;
+    top: -15px;
+}
+
+
+#menu .section-item:nth-child(5) .description::before{
+    border-color: transparent transparent white transparent;
+    top: -15px;
+    
+}
+
+#menu .section-item:nth-child(6) .description::before{
+    border-color: transparent transparent #cce6c2 transparent;
+    transform: rotate(90deg);
+    right: -22px;
+}
+
+#menu .section-item:nth-child(7) .description::before{
+    border-color: transparent transparent #f7ced3 transparent;
+    transform: rotate(180deg);
+    bottom: -15px;
+}
+
 #menu .section-item img{
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
+#menu .section-item .description{
+    background-color: #cce6c2;
+}
+
+#menu .section-item:nth-child(2) .description, 
+#menu .section-item:nth-child(5) .description{
+    background-color: white;
+}
+
+#menu .section-item:nth-child(4) .description, 
+#menu .section-item:nth-child(7) .description{
+    background-color: #f7ced3;
+}
+
+
 
 #menu .section-item:nth-child(1) .figures,
 #menu .section-item:nth-child(1) .description, 
@@ -487,14 +619,6 @@ nav ul li:nth-child(3)::before{
 #menu .section-item:nth-child(7) .description{
     width: 100%;
     height: 50%;
-}
-
-#menu .section-item .description{
-   
-    background-color: #cce6c2;
-    
-    
-    
 }
 
 #menu .section-item:nth-child(1){
@@ -747,3 +871,25 @@ footer span:last-child{
 }
 
 /* END OF HORIZONTAL IMAGES */
+
+/* ANIMATIONS */
+img{
+    transition: padding 0.5s ease, opacity 0.5s ease;
+}
+
+blockquote{
+    transition: opacity 0.5s ease;
+}
+
+/* CONTACT */ 
+#contact img:hover, #contact blockquote:hover ~ img{
+    padding: 0;
+    opacity: 1;
+}
+
+#contact blockquote:hover{
+    opacity: 1;
+}
+
+
+/* END OF ANIMATIONS */
