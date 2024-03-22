@@ -65,6 +65,9 @@ p{
     font-size: 20px;
 }
 
+.section-item:hover > p{
+    color: black;
+}
 
 #about, #events, #services, footer .section-content,
 #team .section-content,
@@ -134,10 +137,12 @@ footer .section-content{
     height: 20px;
     color: transparent;
     visibility: hidden;
+    
 }
 
 .references a::before{
     visibility: visible;
+    transition: box-shadow 0.5s ease;
     color: green;
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -198,6 +203,11 @@ nav a{
     font-family: "Calistoga";
     font-size: 20px;
     text-transform: uppercase;
+    transition: color 0.5s ease-out;
+}
+
+nav a:hover {
+    color:green;
 }
 
 nav ul li:nth-child(3) a{
@@ -349,8 +359,25 @@ nav ul li:nth-child(3)::before{
     display: flex;
     flex-direction: column;
     text-align: center;
-    
-    
+    opacity: 0.9;
+}
+
+#team .section-item:nth-child(odd):hover{
+    background-color: #cce6c2;
+    opacity: 1;
+}
+
+#team .section-item:nth-child(even):hover{
+    background-color: #f7ced3;
+    opacity: 1;
+}
+
+#team .section-item:hover > img{
+    padding: 0;
+}
+
+#team .section-item:hover > h3{
+    color: black;
 }
 
 #team img{
@@ -380,7 +407,6 @@ nav ul li:nth-child(3)::before{
 
 #events{
     position: relative;
-    z-index: -1;
     
 }
 
@@ -388,6 +414,14 @@ nav ul li:nth-child(3)::before{
     display: inline-block;
     padding: 20px 0px;
     margin: 0px 10px;
+}
+
+#events .section-item:hover > h3{
+    color:green;
+}
+
+#events .section-item:hover > img{
+    padding: 0;
 }
 
 #events::before{
@@ -451,6 +485,7 @@ nav ul li:nth-child(3)::before{
     float: left;
     margin-right: 20px;
     margin-left: 0px;
+    padding: 10px;
 }
 
 
@@ -464,7 +499,6 @@ nav ul li:nth-child(3)::before{
 #events .references ul{
     height: 32px;
     align-items: center;
-
 }
 
 /* END OF EVENTS STYLE */
@@ -473,6 +507,8 @@ nav ul li:nth-child(3)::before{
 
 #menu{
     background-image: url("../img/bg/bg-menu.jpg");
+    background-size: cover;
+
 }
 
 #menu .section-content{
@@ -493,6 +529,20 @@ nav ul li:nth-child(3)::before{
     display: flex;
     height: 100%;
     width: 100%;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+}
+
+#menu .section-item:hover{
+    opacity: 1;
+}
+
+#menu .section-item > .figures{
+    transition: padding 0.5s;
+}
+
+#menu .section-item:hover > .figures{
+    padding: 5px;
 }
 
 #menu .description{
@@ -501,7 +551,7 @@ nav ul li:nth-child(3)::before{
     justify-content: center;
     align-items: center;
     position: relative;
-    opacity: 0.9;
+    
 }
 
 .description a{
@@ -574,19 +624,30 @@ nav ul li:nth-child(3)::before{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    
 }
 
 #menu .section-item .description{
     background-color: #cce6c2;
 }
 
+#menu .section-item:nth-child(1) .figures,
+#menu .section-item:nth-child(3) .figures,
+#menu .section-item:nth-child(6) .figures{
+    background-color: #cce6c2;
+}
+
 #menu .section-item:nth-child(2) .description, 
-#menu .section-item:nth-child(5) .description{
+#menu .section-item:nth-child(5) .description,
+#menu .section-item:nth-child(2) .figures,
+#menu .section-item:nth-child(5) .figures{
     background-color: white;
 }
 
 #menu .section-item:nth-child(4) .description, 
-#menu .section-item:nth-child(7) .description{
+#menu .section-item:nth-child(7) .description,
+#menu .section-item:nth-child(4) .figures,
+#menu .section-item:nth-child(7) .figures{
     background-color: #f7ced3;
 }
 
@@ -681,10 +742,28 @@ nav ul li:nth-child(3)::before{
     height: 400px;
     padding: 20px;
     background-color: black;
-    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);*/
+    /*border-style: inset;*/
     position: relative;
     opacity: 0.7;
+    transition: opacity 0.5s;
 
+}
+
+#services .section-content::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: inherit;
+    filter: blur(20px);
+}
+
+#services .section-content:hover{
+    opacity: 1;
 }
 
 table{
@@ -704,6 +783,10 @@ th{
     display: none;
 }
 
+#services tr:hover > td, #services tr:hover a{
+    color:lightgreen;
+}
+
 td:nth-child(1) a{
     color:white;
     font-family: "Calistoga";
@@ -715,6 +798,10 @@ td:nth-child(1) a::after{
     display: flex;
     content: "";
     border-bottom: 2px dotted white;
+}
+
+tr:hover td:nth-child(1) a::after{
+    border-color: lightgreen;
 }
 
 td:nth-child(2){
@@ -873,6 +960,11 @@ footer span:last-child{
 /* END OF HORIZONTAL IMAGES */
 
 /* ANIMATIONS */
+
+.references a:hover::before{
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add the box shadow on hover */
+}
+
 img{
     transition: padding 0.5s ease, opacity 0.5s ease;
 }
